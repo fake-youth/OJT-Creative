@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJT Creative - Digital Agency & Event Organizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .floating-header {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .floating-header.scrolled {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    .portfolio-item {
+      transition: all 0.3s ease;
+    }
+    .portfolio-item:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+  <!-- ================= HEADER ================= -->
+  <header class="floating-header fixed w-full z-50 py-4 bg-white/70 backdrop-blur-md">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="img/OJT 5 TR.png" alt="Logo OJT Creative" class="h-10">
+        <h1 class="text-2xl font-bold text-blue-600">OJT Creative</h1>
+      </div>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Dashboard</a>
+        <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">Kegiatan</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">Tentang Kami</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Kontak</a>
+      </nav>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-gray-700" aria-label="Buka menu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white px-6 py-4 absolute top-16 right-6 shadow-lg rounded-lg">
+      <a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium">Dashboard</a>
+      <a href="#services" class="block text-gray-700 hover:text-blue-600 font-medium">Kegiatan</a>
+      <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium">Tentang Kami</a>
+      <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium">Kontak</a>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-red-50">
+    <div class="container mx-auto px-6 lg:px-16 flex flex-col md:flex-row items-center">
+
+      <!-- Text -->
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Kreasikan Ide Anda Menjadi <span class="text-blue-600">Nyata</span>
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          OJT Creative adalah partner kreatif Anda dalam membangun brand, mengelola event, 
+          dan menyebarkan konten berkualitas melalui berbagai platform digital.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+            Hubungi Kami
+          </a>
+          <a href="#services" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">
+            Layanan Kami
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f7eb32e8-1e6e-4a5c-9344-9e9401e1a963.png"
+             alt="Team kreatif sedang bekerja"
+             class="rounded-xl shadow-xl max-w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Layanan dan Kegiatan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kami menawarkan solusi lengkap untuk kebutuhan kreatif dan komunikasi bisnis Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Digital Agency -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Digital Agency</h3>
+                    <p class="text-gray-600 mb-4">Kami membantu bisnis Anda berkembang melalui solusi digital yang kreatif dan inovatif.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span>Content Creation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span>Web Development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span>Social Media Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span>Digital Marketing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Event Organizer -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-check text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Event Organizer</h3>
+                    <p class="text-gray-600 mb-4">Kami menciptakan pengalaman event yang tak terlupakan dengan eksekusi yang profesional.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span>Seminar & Workshop</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span>Konser & Musik</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span>Corporate Event</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span>Exhibition</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pers dan Media -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-newspaper text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Pers & Media</h3>
+                    <p class="text-gray-600 mb-4">Kami menyampaikan informasi dan berita berkualitas melalui berbagai platform media.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-2"></i>
+                            <span>Jurnalistik</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-2"></i>
+                            <span>Media Relations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-2"></i>
+                            <span>Press Release</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-2"></i>
+                            <span>Konten Berita</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Kegiatan Terakhir -->
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kegiatan Terbaru Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Lihat beberapa proyek dan event yang telah kami kerjakan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9653d89a-3ea3-4287-b541-583b56b99c62.png" alt="Foto dokumentasi seminar digital marketing dengan peserta yang antusias di auditorium modern" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-black-600 font-medium">Seminar </span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2">Digital Marketing</h3>
+                        <p class="text-gray-600 mt-3">Seminar yang dirancang untuk membekali peserta dengan senjata dan digital marketing terkini, dengan menggabungkan kreativitas, teknologi, dan data supaya bisa mendominasi pasar online dengan percaya diri.</p>
+                        <a href="#" class="inline-block text-black-600 font-medium mt-4 hover:text-blue-700 transition">Lihat Detail →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/be03a364-fc3d-4ce4-b4a1-5a09fcbace21.png" alt="Konser musik luar ruangan dengan panggung spektakuler dan crowd yang besar" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-black-600 font-medium">Konser</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2">Pijar Music Event</h3>
+                        <p class="text-gray-600 mt-3">Konser musik kolaborasi berbagai genre dengan artis ternama.</p>
+                        <a href="#" class="inline-block text-black-600 font-medium mt-4 hover:text-blue-700 transition">Lihat Detail →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/217385dc-0fd0-4eb6-b6f7-b236273eb93c.png" alt="Tim kreatif sedang mengembangkan website dengan komputer dan papan sketsa" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-black-600 font-medium">Web Development</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2">Perancangan Website Perusahaan</h3>
+                        <p class="text-gray-600 mt-3">Membangun platform perusahaan dengan tampilan modern dan performa optimal.</p>
+                        <a href="#" class="inline-block text-black-600 font-medium mt-4 hover:text-blue-700 transition">Lihat Detail →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-gray-300 text-gray-700 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition">Lihat Semua Kegiatan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5c9ae416-b9dd-4645-9bfa-1c15cd0779f5.png" alt="Tim OJT Creative berfoto bersama di kantor kreatif dengan suasana modern dan energik" class="rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Tentang OJT Creative</h2>
+                    <p class="text-gray-600 mb-6">OJT Creative adalah perusahaan kreatif yang berdiri sejak 2024, berfokus pada penyediaan solusi digital, pengelolaan event, dan konten pers/media.</p>
+                    <p class="text-gray-600 mb-6">Kami percaya bahwa setiap ide besar dimulai dari konsep sederhana, dan melalui kolaborasi, kami membantu mewujudkan visi Anda menjadi kenyataan.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-blue-600"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">Lebih dari 10 proyek berhasil diselesaikan</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-blue-600"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">Tim profesional dengan pengalaman lebih dari 1 tahun di industri kreatif</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-blue-600"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">Komitmen terhadap kualitas dan inovasi dalam setiap proyek</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-block mt-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tim Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Para profesional kreatif yang siap membantu mewujudkan ide Anda.</p>
+            </div>
+
+            <!-- Grid 6 kolom x 3 baris -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="img/1.jpg" alt="Arya Prasetyo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Arya Prasetyo</h3>
+                        <p class="text-purple-600 font-medium">Content Creator Lead</p>
+                        <p class="text-gray-600 mt-3">Spesialis konten kreatif dengan pengalaman 5 tahun di industri digital.</p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="img/2.jpg" alt="Azka Ar Rasyid" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Muhammad Azka Ar Rasyid</h3>
+                        <p class="text-blue-600 font-medium">Web Developer</p>
+                        <p class="text-gray-600 mt-3">Ahli dalam berbagai teknologi web modern dan pengalaman membangun 100+ website.</p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="img/3.jpg" alt="Erlangga Pratama" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Erlangga Pratama</h3>
+                        <p class="text-green-600 font-medium">Event Coordinator</p>
+                        <p class="text-gray-600 mt-3">Spesialis event management dengan rekam jejak sukses menyelenggarakan berbagai acara besar.</p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-green-600"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-green-600"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="img/4.jpg" alt="Novrizal Mulya Ramadhan" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Novrizal Mulya Ramadhan</h3>
+                        <p class="text-yellow-600 font-medium">Chief Editor</p>
+                        <p class="text-gray-600 mt-3">Jurnalis berpengalaman dan editor konten dengan fokus pada kualitas informasi.</p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-yellow-600"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-yellow-600"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="img/5.jpg" alt="Hermansyah" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Hermansyah</h3>
+                        <p class="text-purple-600 font-medium">Content Creator Lead</p>
+                        <p class="text-gray-600 mt-3">Spesialis konten kreatif dengan pengalaman 5 tahun di industri digital.</p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="img/6.jpg" alt="Susilo Fajar" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Susilo Mawahibul Fajar</h3>
+                        <p class="text-blue-600 font-medium">Web Developer</p>
+                        <p class="text-gray-600 mt-3">Ahli dalam berbagai teknologi web modern dan pengalaman membangun 100+ website.</p>
+                        <div class="mt-4 flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+<section id="contact" class="py-20 px-6 bg-white">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row">
+      <!-- Info Kontak -->
+      <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Hubungi Kami</h2>
+        <p class="text-gray-600 mb-8">
+          Siap membahas proyek Anda selanjutnya? Tim kami akan membantu mewujudkannya.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 mt-1 text-blue-600">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-medium text-gray-800">Kantor Kami</h3>
+              <p class="text-gray-600">Jl. Musholla Nurul Huda, Jatimekar, Kec. Jatiasih, Kota Bks, Jawa Barat 17422</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 mt-1 text-blue-600">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-medium text-gray-800">Telepon</h3>
+              <p class="text-gray-600">+6285173000058</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0 mt-1 text-blue-600">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-medium text-gray-800">Email</h3>
+              <p class="text-gray-600">onjobtrainingubsi@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h3 class="text-lg font-medium text-gray-800 mb-4">Ikuti Kami</h3>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/ojt_creative" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white hover:scale-110 transition transform shadow-md">
+                <i class="ri-instagram-line text-xl"></i>
+            </a>
+            <a href="https://www.tiktok.com/@on.job.training" class="w-10 h-10 rounded-xl bg-black flex items-center justify-center text-white hover:scale-110 transition transform shadow-md">
+                <i class="ri-tiktok-line text-xl"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center text-white hover:scale-110 transition transform shadow-md">
+                <i class="ri-youtube-fill text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="md:w-1/2">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200 h-96 md:h-full">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.85778311216404!2d106.94358866602855!3d-6.299882217635847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69929c73f86e31%3A0x2b4eb1a7f61a137c!2sJl.%20Musholla%20Nurul%20Huda%20No.86%2C%20RT.001%2FRW.004%2C%20Jatimekar%2C%20Kec.%20Jatiasih%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017422!5e0!3m2!1sid!2sid!4v1755565186346!5m2!1sid!2sid" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company -->
+        <div>
+          <div class="flex items-center mb-6">
+            <img src="img/OJT 5 TR.png" alt="Logo kecil OJT Creative" class="h-8 mr-3">
+            <h2 class="text-xl font-bold">OJT Creative</h2>
+          </div>
+          <p class="text-gray-400">
+            Kami adalah perusahaan kreatif yang berfokus pada pengembangan digital, 
+            event organizer, dan jasa pers/media.
+          </p>
+        </div>
+        <!-- Layanan -->
+        <div>
+          <h3 class="text-lg font-bold mb-6">Layanan Kami</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Content Creation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Event Organizer</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Media & Jurnalistik</a></li>
+          </ul>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-6">Tautan Cepat</h3>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition">Dashboard</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">Kegiatan</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+          </ul>
+        </div>
+        <!-- Subscribe -->
+        <div>
+          <h3 class="text-lg font-bold mb-6">Berlangganan</h3>
+          <p class="text-gray-400 mb-4">Dapatkan update terbaru langsung ke email Anda.</p>
+          <div class="flex">
+            <input type="email" placeholder="Alamat Email"
+                   class="px-4 py-2 rounded-l-lg bg-gray-800 text-white focus:outline-none w-full">
+            <button class="bg-blue-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">© 2025 OJT Creative. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    // Floating header effect
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.floating-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
